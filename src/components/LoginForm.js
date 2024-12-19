@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default function Form() {
+export default function LoginForm() {
   return (
     <div className="bg-white px-10 py-20 rounded-3xl border-gray-200">
       <h1 className="text-5xl font-semibold">Welcome to GS Schools</h1>
