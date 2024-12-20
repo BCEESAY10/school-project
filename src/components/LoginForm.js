@@ -1,6 +1,9 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function LoginForm() {
+
   return (
     <div className="bg-white px-10 py-20 rounded-3xl border-gray-200">
       <h1 className="text-5xl font-semibold">Welcome to GS Schools</h1>
@@ -46,6 +49,10 @@ export default function LoginForm() {
           </svg>
             Sign in with Google
           </button>
+        </div>
+        <div className="mt-4 flex gap-4">
+           <h3>Don't have an account? </h3>
+           <Link className="hover:underline"  to="/register">Register here</Link>
         </div>
       </div>
     </div>
