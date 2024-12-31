@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function LoginForm() {
 
+
+
   return (
     <div className="bg-white px-10 py-20 rounded-3xl border-gray-200">
       <h1 className="text-2xl text-center md:text-5xl font-semibold">Welcome to GS Schools</h1>
@@ -11,7 +13,7 @@ export default function LoginForm() {
         Please enter your details
       </h3>
 
-      <div className="mt-8">
+      <form className="mt-8">
         <div>
           <label className="text-lg font-medium">Email</label>
           <input
@@ -40,7 +42,7 @@ export default function LoginForm() {
           </button>
         </div>
         <div className="mt-8 flex flex-col gap-y-4">
-          <button className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">
+          <button type="submit" className="active:scale-[.98] active:duration-75 hover:scale-[1.01] ease-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">
                 Login
           </button>
         </div>
@@ -48,7 +50,7 @@ export default function LoginForm() {
            <h3>Don't have an account? </h3>
            <Link className="hover:underline"  to="/register">Register here</Link>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
