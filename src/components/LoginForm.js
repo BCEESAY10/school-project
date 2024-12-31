@@ -1,10 +1,22 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function LoginForm() {
 
+  const navigate = useNavigate();
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+    
+    const userRole = "admin"; 
+    
+    if (userRole === "admin") {
+      navigate("/admin-dashboard");
+    } else {
+      navigate("/user-dashboard"); 
+    }
+  };
 
   return (
     <div className="bg-white px-10 py-20 rounded-3xl border-gray-200">
@@ -13,7 +25,7 @@ export default function LoginForm() {
         Please enter your details
       </h3>
 
-      <form className="mt-8">
+      <form className="mt-8" onSubmit={handleLogin}>
         <div>
           <label className="text-lg font-medium">Email</label>
           <input
