@@ -7,6 +7,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import RegisterForm from "./components/RegisterForm";
 import LoginForm from "./components/LoginForm";
+import Dashboard from "./components/Dashboard";
 
 function AnimatedRoutes() {
   const location = useLocation();
